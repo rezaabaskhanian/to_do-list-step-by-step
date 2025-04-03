@@ -1,13 +1,14 @@
 package usecase
 
-import "yourproject/internal/domain"
+import "github.com/rezaabaskhanian/to_do-list-step-by-step/internal/domain"
 
-func CreateTask(title, description string) domain.Task {
-	task := domain.Task{
-		ID:          1, // در آینده باید این ID از دیتابیس یا حافظه گرفته بشه
-		Title:       title,
-		Description: description,
-		Done:        false,
+// CreateAssignee یک Assignee جدید ایجاد می‌کند
+func CreateAssignee(name, email string) domain.Assignee {
+	// به طور موقت ID را به صورت دستی می‌دهیم
+	assignee := domain.Assignee{
+		ID:    1, // در آینده باید این ID از دیتابیس یا حافظه گرفته بشه
+		Name:  name,
+		Email: email,
 	}
-	return task
+	return assignee
 }
