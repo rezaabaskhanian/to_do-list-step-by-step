@@ -4,8 +4,8 @@ package domain
 // مثلا هر تسک در دنیای واقعی شامل موارد زیر است
 
 type Task struct {
-	ID          int
-	Title       string
-	Description string
-	Done        bool // مشخص می‌کنه که تسک انجام شده یا نه
+	ID          int    `json:"id"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Done        bool   `json:"done"`
 }
