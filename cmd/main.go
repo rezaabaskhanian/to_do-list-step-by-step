@@ -8,18 +8,12 @@ import (
 )
 
 func main() {
+	// بررسی اینکه آیا کاربر دستوری وارد کرده است یا نه
 	if len(os.Args) < 2 {
-		fmt.Println("یک ساب‌کامند مورد نیاز است: create-task یا list-tasks")
+		fmt.Println("لطفاً دستور را وارد کنید.")
 		os.Exit(1)
 	}
 
-	switch os.Args[1] {
-	case "create-task":
-		interfaces.CreateTask()
-	case "list-tasks":
-		interfaces.ListTasks()
-	default:
-		fmt.Println("ساب‌کامند نامعتبر است. از create-task یا list-tasks استفاده کنید.")
-		os.Exit(1)
-	}
+	// اجرای دستورات مختلف CLI
+	interfaces.RunCLI()
 }

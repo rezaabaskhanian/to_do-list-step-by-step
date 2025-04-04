@@ -9,3 +9,8 @@ type Task struct {
 	Description string `json:"description"`
 	Done        bool   `json:"done"`
 }
+
+// متدی برای تغییر وضعیت تسک به انجام شده
+func (t *Task) MarkAsDone() {
+	t.Done = true
+}
