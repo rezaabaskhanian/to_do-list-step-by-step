@@ -10,6 +10,8 @@ import (
 
 const storageFile = "tasks.json"
 
+//TODO bere task.json va assignee.json kham ro besaze hamoo aval . va check kone age vojud dasht dige nasaze 
+
 // SaveTasks کل لیست تسک‌ها را به صورت JSON در فایل ذخیره می‌کند.
 func SaveTasks(tasks []domain.Task) error {
 	file, err := os.OpenFile(storageFile, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
@@ -47,3 +49,8 @@ func LoadTasks() ([]domain.Task, error) {
 	}
 	return tasks, nil
 }
+
+
+//TODO : Save Assignee
+
+// TODO : Load Assignee
