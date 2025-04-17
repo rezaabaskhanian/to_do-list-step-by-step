@@ -7,21 +7,17 @@ import (
 	"github.com/rezaabaskhanian/to_do-list-step-by-step/internal/usecase"
 )
 
-type fileRepository struct{}
+func main (){
 
-func (f *fileRepository) Save(tasks []domain.Task) error {
-	return infrastructure.SaveTasks(tasks)
-}
+	// aval storage ro besaz ( init stroagte mikonam )
 
-func (f *fileRepository) Load() ([]domain.Task, error) {
-	return infrastructure.LoadTasks()
-}
+// dovom boro application ro setup kon: 
+	dar in marhale ma mikhayym ye struct repository todo ba ye assignee biarim bala 
+	ke betonim be onvane vorudi bedim be taskService va assgineeService
 
-func main() {
-	// ایجاد نمونه از repository
-	repo := &fileRepository{}
-	// ایجاد usecase با تزریق repository
-	useCase := usecase.NewTaskUseCase(repo)
-	// اجرای برنامه CLI
-	interfaces.RunCLI(useCase)
+
+	hala barname kar mikone vali niaz dari ke behesh az ye tarifi vasl beshi. 
+	mirim soraghe laye presentation va inja cli ro call mikonim 
+
+
 }
