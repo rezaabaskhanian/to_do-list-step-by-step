@@ -13,11 +13,3 @@ type Task struct {
 	Done        bool      `json:"done"`
 }
 
-// TaskRepository مسئول ذخیره و بازیابی تسک‌ها از یک منبع داده است.
-type TaskRepository interface {
-	// Save همه‌ی تسک‌ها را ذخیره می‌کند (مثلاً در یک فایل یا دیتابیس)
-	Save(tasks []Task) error
-
-	// Load لیست تسک‌ها را از منبع داده بارگذاری می‌کند
-	Load() ([]Task, error)
-}
